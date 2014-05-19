@@ -1,0 +1,868 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+
+#include "Define.h"
+#include "Windows.h"
+
+#ifdef _CHS
+#define AFX_TARG_CHS
+#else //_CHS
+#define AFX_TARG_NEUD
+#endif //_CHS
+
+#ifndef APSTUDIO_INVOKED
+#define AFX_RESOURCE_DLL
+#endif // APSTUDIO_INVOKED
+
+#if defined(_M_IA64)
+#define STR_Architecture "ia64"
+#elif defined(_M_X64)
+#define STR_Architecture "amd64"
+#else
+#define STR_Architecture "x86"
+#endif
+
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 非特定语言(默认) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_Main                ICON                    "Resource\\Main.ico"
+IDI_File                ICON                    "Resource\\File.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_Toolbar             BITMAP                  "Resource\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_Menu MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            IDM_File_Open
+        MENUITEM SEPARATOR
+        MENUITEM "&Export...\tCtrl+E",          IDM_File_Export, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_File_Exit
+    END
+    POPUP "&Play"
+    BEGIN
+        MENUITEM "&Play/Stop\tSpace",           IDM_Play_Play, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Goto S&tart\tCtrl+Left",      IDM_Play_GotoStart, GRAYED
+        MENUITEM "Step &Backward\tLeft",        IDM_Play_StepBackward
+        , GRAYED
+        MENUITEM "Step &Forward\tRight",        IDM_Play_StepForward, GRAYED
+        MENUITEM "Goto &End\tCtrl+Right",       IDM_Play_GotoEnd, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Synchronize",                IDM_Play_Synchronize, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Sc&rabble",                   IDM_Play_Scrabble, GRAYED
+        MENUITEM SEPARATOR
+        POPUP "&Display"
+        BEGIN
+            MENUITEM "&GDI Mode",                   IDM_Play_GdiDraw, GRAYED
+            MENUITEM "&DirectDraw Mode",            IDM_Play_DirectDraw
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Channel"
+        BEGIN
+            MENUITEM "&Y Channel",                  IDM_Play_YChannel
+            , CHECKED, GRAYED
+            MENUITEM "&U Channel",                  IDM_Play_UChannel
+            , CHECKED, GRAYED
+            MENUITEM "&V Channel",                  IDM_Play_VChannel
+            , CHECKED, GRAYED
+            MENUITEM SEPARATOR
+            MENUITEM "&R Channel",                  IDM_Play_RChannel
+            , CHECKED, GRAYED
+            MENUITEM "&G Channel",                  IDM_Play_GChannel
+            , CHECKED, GRAYED
+            MENUITEM "&B Channel",                  IDM_Play_BChannel
+            , CHECKED, GRAYED
+        END
+        MENUITEM SEPARATOR
+        POPUP "&Zoom"
+        BEGIN
+            MENUITEM "&Half Size",                  IDM_Play_ZoomHalf
+            , GRAYED
+            MENUITEM "&Actual Size",                IDM_Play_ZoomActual
+            , GRAYED
+            MENUITEM "&Double Size",                IDM_Play_ZoomDouble
+            , GRAYED
+        END
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    IDM_View_Toolbar
+        , CHECKED, GRAYED
+        MENUITEM "Stat&us Bar",                 IDM_View_StatusBar
+        , CHECKED, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Always O&n Top",              IDM_View_AlwaysOnTop
+        MENUITEM "&Minimize To Tray\tCtrl+M",   IDM_View_MinToTray
+        MENUITEM SEPARATOR
+        MENUITEM "Show &Splash On Startup",     IDM_View_ShowSplash, CHECKED
+        MENUITEM "Show &Open Dialog On Startup", IDM_View_ShowOpen
+        MENUITEM "&Play On Open",               IDM_View_PlayOnOpen
+        MENUITEM SEPARATOR
+        MENUITEM "&Associate YUV Files",        IDM_View_AssociateFile
+        MENUITEM SEPARATOR
+        POPUP "&Language"
+        BEGIN
+            MENUITEM "&Default",                    IDM_View_Default
+        END
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&Cascade",                    IDM_Window_Cascade, GRAYED
+        MENUITEM "Title &Horizontal",           IDM_Window_TitleHorz, GRAYED
+        MENUITEM "Title &Vertical",             IDM_Window_TitleVert, GRAYED
+        MENUITEM "Arrange &Icons",              IDM_Window_ArrangeIcons
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Close &All\tCtrl+W",          IDM_Window_CloseAll, GRAYED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Content",               IDM_Help_Content
+        MENUITEM SEPARATOR
+        POPUP "Create &Shortcut"
+        BEGIN
+            MENUITEM "On Des&ktop",                 IDM_Help_Desktop
+            MENUITEM "On Sta&rt Menu",              IDM_Help_StartMenu
+            MENUITEM "On &Program Menu",            IDM_Help_ProgramMenu
+            MENUITEM "On &Quick Launch Toolbar",    IDM_Help_QuickLaunch
+            MENUITEM SEPARATOR
+            MENUITEM "On Visual Studio &Tools Menu", IDM_Help_VisualStudio
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&About RawPlayer...",         IDM_Help_About
+    END
+END
+
+IDR_Menu_Format MENU 
+BEGIN
+    POPUP "&Format"
+    BEGIN
+        MENUITEM "&CIF\t352x288",               IDM_Format_CIF
+        MENUITEM "&QCIF\t176x144",              IDM_Format_QCIF
+        MENUITEM "SU&B QCIF\t128x96",           IDM_Format_SUBQCIF
+        MENUITEM SEPARATOR
+        MENUITEM "&SIF\t320x240",               IDM_Format_SIF
+        MENUITEM "QS&IF\t160x120",              IDM_Format_QSIF
+        MENUITEM SEPARATOR
+        MENUITEM "&VGA\t640x480",               IDM_Format_VGA
+        MENUITEM "QV&GA\t320x240",              IDM_Format_QVGA
+        MENUITEM "QQVG&A\t160x120",             IDM_Format_QQVGA
+        MENUITEM SEPARATOR
+        MENUITEM "VCD &NTSC\t352x240",          IDM_Format_VCDNTSC
+        MENUITEM "VCD &PAL\t352x288",           IDM_Format_VCDPAL
+        MENUITEM SEPARATOR
+        MENUITEM "&DVD NTSC\t720x480",          IDM_Format_DVDNTSC
+        MENUITEM "DVD PA&L\t720x576",           IDM_Format_DVDPAL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_Accel ACCELERATORS 
+BEGIN
+    "O",            IDM_File_Open,          VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_File_Export,        VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       IDM_Play_Play,          VIRTKEY, NOINVERT
+    VK_LEFT,        IDM_Play_GotoStart,     VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_Play_StepBackward,  VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_Play_StepForward,   VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_Play_GotoEnd,       VIRTKEY, CONTROL, NOINVERT
+    "M",            IDM_View_MinToTray,     VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_Window_CloseAll,    VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Open DIALOGEX 0, 0, 294, 103
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "&Format",IDC_Open_FormatFrame,3,3,150,96
+    LTEXT           "Frame &Size:",IDC_Open_FrameSizeText,11,18,45,10
+    EDITTEXT        IDC_Open_Width,58,16,39,12,ES_NUMBER
+    CONTROL         "",IDC_Open_WidthSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,11,10,
+                    12
+    PUSHBUTTON      "&X",IDC_Open_MulSignText,99,16,8,12,BS_FLAT
+    EDITTEXT        IDC_Open_Height,109,16,39,12
+    CONTROL         "",IDC_Open_HeightSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,123,11,10,
+                    12
+    LTEXT           "Frame &Rate:",IDC_Open_FrameRateText,11,39,45,10
+    EDITTEXT        IDC_Open_FrameRate,58,38,39,12,ES_NUMBER
+    CONTROL         "",IDC_Open_FrameRateSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,33,10,
+                    12
+    LTEXT           "FPS",IDC_Open_FpsText,101,40,23,10
+    LTEXT           "Frame Ste&p",IDC_Open_FrameStepText,11,60,45,10
+    EDITTEXT        IDC_Open_FrameStep,58,58,39,12
+    CONTROL         "",IDC_Open_FrameStepSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,53,10,
+                    12
+    LTEXT           "Tota&l Frame:",IDC_Open_TotalFrameText,11,81,45,10
+    EDITTEXT        IDC_Open_TotalFrame,58,79,39,12,ES_READONLY
+    GROUPBOX        "",IDC_Open_PreviewFrame,163,3,126,96,0,WS_EX_RIGHT
+    CONTROL         "Pre&view",IDC_Open_Preview,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,169,1,42,13
+    CTEXT           "",IDC_Open_StatusText,242,3,40,10,0,WS_EX_STATICEDGE
+END
+
+IDD_Export DIALOGEX 0, 0, 280, 68
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "&Range",IDC_Export_RangeFrame,3,2,157,63
+    CONTROL         "&Current frame.",IDC_Export_CurrentFrame,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,10,14,72,11
+    CONTROL         "&All frames.",IDC_Export_AllFrames,"Button",
+                    BS_AUTORADIOBUTTON,10,30,72,11
+    CONTROL         "&From:",IDC_Export_FrameRange,"Button",
+                    BS_AUTORADIOBUTTON,10,46,32,11
+    EDITTEXT        IDC_Export_From,46,46,36,12,WS_DISABLED
+    CONTROL         "",IDC_Export_FromSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,73,41,9,
+                    11
+    CTEXT           "T&o:",IDC_Export_ToText,86,48,25,10
+    EDITTEXT        IDC_Export_To,114,46,36,12,WS_DISABLED
+    CONTROL         "",IDC_Export_ToSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,141,41,9,
+                    11
+    GROUPBOX        "For&mat",IDC_Export_FormatFrame,165,2,110,63
+    CONTROL         "One frame &per file.",IDC_Export_MultiFiles,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,172,20,96,11
+    CONTROL         "A&ll frames in a file.",IDC_Export_OneFile,"Button",
+                    BS_AUTORADIOBUTTON,172,40,96,11
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\r\n"
+    "#include ""Define.h""\r\n"
+    "#include ""Windows.h""\r\n"
+    "\r\n"
+    "#ifdef _CHS\r\n"
+    "#define AFX_TARG_CHS\r\n"
+    "#else //_CHS\r\n"
+    "#define AFX_TARG_NEUD\r\n"
+    "#endif //_CHS\r\n"
+    "\r\n"
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#define AFX_RESOURCE_DLL\r\n"
+    "#endif // APSTUDIO_INVOKED\r\n"
+    "\r\n"
+    "#if defined(_M_IA64)\r\n"
+    "#define STR_Architecture ""ia64""\r\n"
+    "#elif defined(_M_X64)\r\n"
+    "#define STR_Architecture ""amd64""\r\n"
+    "#else\r\n"
+    "#define STR_Architecture ""x86""\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT\r\n"
+    "#pragma code_page(DEFAULT)\r\n"
+    "\r\n"
+    "VS_VERSION_INFO VERSIONINFO\r\n"
+    "FILEVERSION VER_Major, VER_Minor, VER_Release, VER_Build\r\n"
+    "PRODUCTVERSION VER_Major, VER_Minor, VER_Release, VER_Build\r\n"
+    "FILEFLAGSMASK VS_FFI_FILEFLAGSMASK\r\n"
+    "FILEFLAGS 0\r\n"
+    "FILEOS VOS__WINDOWS32\r\n"
+    "FILETYPE 0\r\n"
+    "FILESUBTYPE VFT2_UNKNOWN\r\n"
+    "BEGIN\r\n"
+    "    BLOCK ""StringFileInfo""\r\n"
+    "    BEGIN\r\n"
+    "        BLOCK ""040004e4""\r\n"
+    "        BEGIN\r\n"
+    "            VALUE ""FileVersion"", STR_VersionStamp\r\n"
+    "            VALUE ""FileDescription"", STR_Description\r\n"
+    "            VALUE ""ProductName"", STR_AppName\r\n"
+    "            VALUE ""ProductVersion"", STR_Version\r\n"
+    "            VALUE ""CompanyName"", STR_Corporation\r\n"
+    "            VALUE ""LegalCopyright"", STR_Copyright\r\n"
+    "            VALUE ""Comments"", ""Powered by "" STR_Author\r\n"
+    "            VALUE ""OriginalFilename"", STR_AppName EXT_Exe\r\n"
+    "        END\r\n"
+    "    END\r\n"
+    "    BLOCK ""VarFileInfo""\r\n"
+    "    BEGIN\r\n"
+    "        VALUE ""Translation"", 0x0400, 0x04e4\r\n"
+    "    END\r\n"
+    "END\r\n"
+    "\r\n"
+    "1 24\r\n"
+    "BEGIN\r\n"
+    "    ""<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\\r\\n""\r\n"
+    "    ""<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>\\r\\n""\r\n"
+    "    ""<assemblyIdentity\\r\\n""\r\n"
+    "    ""    name='Microsoft.Windows.Shell.ClassXP'\\r\\n""\r\n"
+    "    ""    processorArchitecture='"" STR_Architecture ""'\\r\\n""\r\n"
+    "    ""    version='1.0.0.0'\\r\\n""\r\n"
+    "    ""    type='win32'/>\\r\\n""\r\n"
+    "    ""<description>ClassXP</description>\\r\\n""\r\n"
+    "    ""<dependency>\\r\\n""\r\n"
+    "    ""    <dependentAssembly>\\r\\n""\r\n"
+    "    ""        <assemblyIdentity\\r\\n""\r\n"
+    "    ""            type='win32'\\r\\n""\r\n"
+    "    ""            name='Microsoft.Windows.Common-Controls'\\r\\n""\r\n"
+    "    ""            version='6.0.0.0'\\r\\n""\r\n"
+    "    ""            processorArchitecture='"" STR_Architecture ""'\\r\\n""\r\n"
+    "    ""            publicKeyToken='6595b64144ccf1df'\\r\\n""\r\n"
+    "    ""            language='*'\\r\\n""\r\n"
+    "    ""        />\\r\\n""\r\n"
+    "    ""    </dependentAssembly>\\r\\n""\r\n"
+    "    ""</dependency>\\r\\n""\r\n"
+    "   ""</assembly>\\r\\n""\r\n"
+    "END\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDM_File_Open           "Open a raw video file."
+    IDM_File_Export         "Export the video sequence as specified format."
+    IDM_File_Exit           "Exit the application."
+    IDM_File_Recent         "Open this file."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Play_Play           "Play or stop video."
+    IDM_Play_GotoStart      "Goto the first frame."
+    IDM_Play_StepBackward   "Step frame backward."
+    IDM_Play_StepForward    "Step frame forward."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Play_GotoEnd        "Goto the last frame."
+    IDM_Play_Synchronize    "Synchronize all playing progress."
+    IDM_Play_Scrabble       "Scrabble all playing window."
+    IDM_Play_GdiDraw        "Display video by using Windows GDI."
+    IDM_Play_DirectDraw     "Display video by using Microsoft DirectDraw."
+    IDM_Play_YChannel       "Show or hide Y channel."
+    IDM_Play_UChannel       "Show or hide Y channel."
+    IDM_Play_VChannel       "Show or hide V channel."
+    IDM_Play_RChannel       "Show or hide R channel."
+    IDM_Play_GChannel       "Show or hide G channel."
+    IDM_Play_BChannel       "Show or hide B channel."
+    IDM_Play_ZoomHalf       "Set video window size to half original video size."
+    IDM_Play_ZoomActual     "Set video window size to actual video size."
+    IDM_Play_ZoomDouble     "Set video window size to double original video size."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Window_Cascade      "Arrange windows so they overlap."
+    IDM_Window_TitleHorz    "Arrange windows horizontal as non-overlapping tiles."
+    IDM_Window_TitleVert    "Arrange windows vertical as non-overlapping tiles."
+    IDM_Window_ArrangeIcons "Arrange icons at the bottom of the window."
+    IDM_Window_CloseAll     "Close all opened windows."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_View_Toolbar        "Show or hide toolbar."
+    IDM_View_StatusBar      "Show or hide status bar."
+    IDM_View_AlwaysOnTop    "Put the main window at the top of all the other windows."
+    IDM_View_MinToTray      "Minimize the main window to system tray."
+    IDM_View_ShowSplash     "Show splash screen on startup."
+    IDM_View_ShowOpen       "Show open file dialog on startup."
+    IDM_View_PlayOnOpen     "Play video automatically on file open."
+    IDM_View_AssociateFile  "Register RawPlayer as the default open tool for YUV files."
+    IDM_View_Default        "Switch to built-in language."
+    IDM_View_FirstLang      "Switch to this language."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Help_Content        "Display help content."
+    IDM_Help_Desktop        "Create shortcut on Desktop."
+    IDM_Help_StartMenu      "Create shortcut on Start Menu."
+    IDM_Help_ProgramMenu    "Create shortcut on Program Menu."
+    IDM_Help_QuickLaunch    "Create shortcut on Quick Launch Toolbar."
+    IDM_Help_VisualStudio   "Create shortcut on Microsoft Visual Studio Tools Menu."
+    IDM_Help_About          "Display program information, version number and copyright."
+END
+
+#endif    // 非特定语言(默认) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(中华人民共和国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_Main                ICON                    "Resource\\Main.ico"
+IDI_File                ICON                    "Resource\\File.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_Toolbar             BITMAP                  "Resource\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_Menu MENU 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",         IDM_File_Open
+        MENUITEM SEPARATOR
+        MENUITEM "导出(&E)...\tCtrl+E",         IDM_File_Export, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    IDM_File_Exit
+    END
+    POPUP "播放(&P)"
+    BEGIN
+        MENUITEM "播放/停止(&P)\tSpace",        IDM_Play_Play
+        MENUITEM SEPARATOR
+        MENUITEM "转到开始(&T)\tCtrl+←",       IDM_Play_GotoStart, GRAYED
+        MENUITEM "帧退(&B)\t←",                IDM_Play_StepBackward
+        , GRAYED
+        MENUITEM "帧进(&F)\t→",                IDM_Play_StepForward, GRAYED
+        MENUITEM "转到结束(&E)\tCtrl+→",       IDM_Play_GotoEnd, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "同步播放(&S)",                IDM_Play_Synchronize, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "拼接播放(&R)",                IDM_Play_Scrabble, GRAYED
+        MENUITEM SEPARATOR
+        POPUP "显示(&D)"
+        BEGIN
+            MENUITEM "GDI 方式(&G)",                IDM_Play_GdiDraw, GRAYED
+            MENUITEM "DierctDraw 方式(&D)",         IDM_Play_DirectDraw
+            , GRAYED
+        END
+        MENUITEM SEPARATOR
+        POPUP "通道(&C)"
+        BEGIN
+            MENUITEM "Y 通道(&Y)",                  IDM_Play_YChannel
+            , CHECKED, GRAYED
+            MENUITEM "U 通道(&U)",                  IDM_Play_UChannel
+            , CHECKED, GRAYED
+            MENUITEM "V 通道(&V)",                  IDM_Play_VChannel
+            , CHECKED, GRAYED
+            MENUITEM SEPARATOR
+            MENUITEM "R 通道(&R)",                  IDM_Play_RChannel
+            , CHECKED, GRAYED
+            MENUITEM "G 通道(&G)",                  IDM_Play_GChannel
+            , CHECKED, GRAYED
+            MENUITEM "B 通道(&B)",                  IDM_Play_BChannel
+            , CHECKED, GRAYED
+        END
+        MENUITEM SEPARATOR
+        POPUP "缩放(&Z)"
+        BEGIN
+            MENUITEM "半倍大小(&H)",                IDM_Play_ZoomHalf
+            , GRAYED
+            MENUITEM "原始大小(&A)",                IDM_Play_ZoomActual
+            , GRAYED
+            MENUITEM "双倍大小(&D)",                IDM_Play_ZoomDouble
+            , GRAYED
+        END
+    END
+    POPUP "查看(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                  IDM_View_Toolbar, CHECKED
+        MENUITEM "状态栏(&U)",                  IDM_View_StatusBar
+        , CHECKED, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "总在最前(&N)",                IDM_View_AlwaysOnTop
+        MENUITEM "最小化到系统托盘(&M)\tCtrl+M", IDM_View_MinToTray
+        MENUITEM SEPARATOR
+        MENUITEM "显示启动画面(&S)",            IDM_View_ShowSplash, CHECKED
+        MENUITEM "启动时打开文件(&O)",          IDM_View_ShowOpen
+        MENUITEM "打开时自动播放(&P)",          IDM_View_PlayOnOpen
+        MENUITEM SEPARATOR
+        MENUITEM "关联到 YUV 文件(&A)",         IDM_View_AssociateFile
+        MENUITEM SEPARATOR
+        POPUP "语言(&L)"
+        BEGIN
+            MENUITEM "默认(&D)",                    IDM_View_Default
+        END
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "层叠(&C)",                    IDM_Window_Cascade, GRAYED
+        MENUITEM "水平平铺(&H)",                IDM_Window_TitleHorz, GRAYED
+        MENUITEM "垂直平铺(&V)",                IDM_Window_TitleVert, GRAYED
+        MENUITEM "排列图标(&I)",                IDM_Window_ArrangeIcons
+        , GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "全部关闭(&A)\tCtrl+W",        IDM_Window_CloseAll, GRAYED
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "帮助内容(&H)",                IDM_Help_Content
+        MENUITEM SEPARATOR
+        POPUP "创建快捷方式(&S)"
+        BEGIN
+            MENUITEM "在桌面上(&K)",                IDM_Help_Desktop
+            MENUITEM "在开始菜单(&R)",              IDM_Help_StartMenu
+            MENUITEM "在程序菜单(&P)",              IDM_Help_ProgramMenu
+            MENUITEM "在快速启动工具栏(&Q)",        IDM_Help_QuickLaunch
+            MENUITEM SEPARATOR
+            MENUITEM "在 Visual Studio 工具菜单(&T)", IDM_Help_VisualStudio
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "关于 RawPlayer(&A)...",       IDM_Help_About
+    END
+END
+
+IDR_Menu_Format MENU 
+BEGIN
+    POPUP "&Format"
+    BEGIN
+        MENUITEM "&CIF\t352x288",               IDM_Format_CIF
+        MENUITEM "&QCIF\t176x144",              IDM_Format_QCIF
+        MENUITEM "SU&B QCIF\t128x96",           IDM_Format_SUBQCIF
+        MENUITEM SEPARATOR
+        MENUITEM "&SIF\t320x240",               IDM_Format_SIF
+        MENUITEM "QS&IF\t160x120",              IDM_Format_QSIF
+        MENUITEM SEPARATOR
+        MENUITEM "&VGA\t640x480",               IDM_Format_VGA
+        MENUITEM "QV&GA\t320x240",              IDM_Format_QVGA
+        MENUITEM "QQVG&A\t160x120",             IDM_Format_QQVGA
+        MENUITEM SEPARATOR
+        MENUITEM "VCD &NTSC\t352x240",          IDM_Format_VCDNTSC
+        MENUITEM "VCD &PAL\t352x288",           IDM_Format_VCDPAL
+        MENUITEM SEPARATOR
+        MENUITEM "&DVD NTSC\t720x480",          IDM_Format_DVDNTSC
+        MENUITEM "DVD PA&L\t720x576",           IDM_Format_DVDPAL
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_Accel ACCELERATORS 
+BEGIN
+    "O",            IDM_File_Open,          VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_File_Export,        VIRTKEY, CONTROL, NOINVERT
+    VK_SPACE,       IDM_Play_Play,          VIRTKEY, NOINVERT
+    VK_LEFT,        IDM_Play_GotoStart,     VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        IDM_Play_StepBackward,  VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_Play_StepForward,   VIRTKEY, NOINVERT
+    VK_RIGHT,       IDM_Play_GotoEnd,       VIRTKEY, CONTROL, NOINVERT
+    "M",            IDM_View_MinToTray,     VIRTKEY, CONTROL, NOINVERT
+    "E",            IDM_Window_CloseAll,    VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_Open DIALOGEX 0, 0, 294, 104
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 9, "宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "格式(&F)",IDC_Open_FormatFrame,3,3,144,98
+    LTEXT           "尺寸(&S):",IDC_Open_FrameSizeText,11,18,45,10
+    EDITTEXT        IDC_Open_Width,58,16,37,12,ES_NUMBER
+    CONTROL         "",IDC_Open_WidthSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,11,10,
+                    12
+    PUSHBUTTON      "×",IDC_Open_MulSignText,97,16,8,12,BS_FLAT
+    EDITTEXT        IDC_Open_Height,106,16,37,12
+    CONTROL         "",IDC_Open_HeightSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,123,11,10,
+                    12
+    LTEXT           "帧率(&R):",IDC_Open_FrameRateText,11,39,45,10
+    EDITTEXT        IDC_Open_FrameRate,58,38,37,12,ES_NUMBER
+    CONTROL         "",IDC_Open_FrameRateSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,33,10,
+                    12
+    LTEXT           "帧/秒",IDC_Open_FpsText,99,40,23,10
+    LTEXT           "帧幅(&P):",IDC_Open_FrameStepText,11,60,45,10
+    EDITTEXT        IDC_Open_FrameStep,58,58,37,12
+    CONTROL         "",IDC_Open_FrameStepSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,80,53,10,
+                    12
+    LTEXT           "帧数(&L):",IDC_Open_TotalFrameText,11,81,45,10
+    EDITTEXT        IDC_Open_TotalFrame,58,79,37,12,ES_READONLY
+    GROUPBOX        "",IDC_Open_PreviewFrame,154,3,135,98,0,WS_EX_RIGHT
+    CONTROL         "预览(&V)",IDC_Open_Preview,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,160,1,42,13
+    CTEXT           "",IDC_Open_StatusText,242,3,40,10,0,WS_EX_STATICEDGE
+END
+
+IDD_Export DIALOGEX 0, 0, 280, 68
+STYLE DS_SETFONT | DS_CONTROL | WS_CHILD | WS_CLIPSIBLINGS
+FONT 9, "宋体", 400, 0, 0x86
+BEGIN
+    GROUPBOX        "范围(&R)",IDC_Export_RangeFrame,3,2,157,63
+    CONTROL         "当前帧(&C)",IDC_Export_CurrentFrame,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,10,14,72,11
+    CONTROL         "所有帧(&A)",IDC_Export_AllFrames,"Button",
+                    BS_AUTORADIOBUTTON,10,30,72,11
+    CONTROL         "从(&F):",IDC_Export_FrameRange,"Button",
+                    BS_AUTORADIOBUTTON,10,46,32,11
+    EDITTEXT        IDC_Export_From,46,46,36,12,WS_DISABLED
+    CONTROL         "",IDC_Export_FromSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,73,41,9,
+                    11
+    CTEXT           "到(&O):",IDC_Export_ToText,86,48,25,10
+    EDITTEXT        IDC_Export_To,114,46,36,12,WS_DISABLED
+    CONTROL         "",IDC_Export_ToSpin,"msctls_updown32",UDS_WRAP | 
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS | UDS_HOTTRACK,141,41,9,
+                    11
+    GROUPBOX        "格式(&M)",IDC_Export_FormatFrame,165,2,110,63
+    CONTROL         "每帧一个文件(&P)",IDC_Export_MultiFiles,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,172,20,96,11
+    CONTROL         "保存为帧序列(&L)",IDC_Export_OneFile,"Button",
+                    BS_AUTORADIOBUTTON,172,40,96,11
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDM_File_Open           "打开文件。"
+    IDM_File_Export         "用指定的格式导出视频序列到文件中。"
+    IDM_File_Exit           "退出应用程序。"
+    IDM_File_Recent         "打开这个文件。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Play_Play           "播放或停止播放。"
+    IDM_Play_GotoStart      "转到第一帧。"
+    IDM_Play_StepBackward   "单步后退。"
+    IDM_Play_StepForward    "单步前进。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Play_GotoEnd        "转到最后一帧。"
+    IDM_Play_Synchronize    "使所有窗口同步播放。"
+    IDM_Play_Scrabble       "使所有窗口拼接播放。"
+    IDM_Play_GdiDraw        "使用 GDI 方式显示图像。"
+    IDM_Play_DirectDraw     "使用 DirectDraw 方式显示图像。"
+    IDM_Play_YChannel       "显示或不显示 Y 通道。"
+    IDM_Play_UChannel       "显示或不显示 U 通道。"
+    IDM_Play_VChannel       "显示或不显示 V 通道。"
+    IDM_Play_RChannel       "显示或不显示 R 通道。"
+    IDM_Play_GChannel       "显示或不显示 G 通道。"
+    IDM_Play_BChannel       "显示或不显示 B 通道。"
+    IDM_Play_ZoomHalf       "调整视频为原始尺寸的一半。"
+    IDM_Play_ZoomActual     "调整视频为原始尺寸。"
+    IDM_Play_ZoomDouble     "调整视频为原始尺寸的两倍。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Window_Cascade      "以重叠方式排列窗口。"
+    IDM_Window_TitleHorz    "以非重叠的水平平铺方式排列窗口。"
+    IDM_Window_TitleVert    "以非重叠的垂直平铺方式排列窗口。"
+    IDM_Window_ArrangeIcons "在窗口底部排列图标。"
+    IDM_Window_CloseAll     "关闭所有窗口。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_View_Toolbar        "显示或隐藏工具栏。"
+    IDM_View_StatusBar      "显示或隐藏状态栏。"
+    IDM_View_AlwaysOnTop    "使主窗口在其它窗口之前。"
+    IDM_View_MinToTray      "最小化主窗口到系统托盘。"
+    IDM_View_ShowSplash     "启动时显示信息画面。"
+    IDM_View_ShowOpen       "启动时显示打开文件对话框。"
+    IDM_View_PlayOnOpen     "打开文件时自动播放视频。"
+    IDM_View_AssociateFile  "把 RawPlayer 注册为 YUV 文件的默认打开工具。"
+    IDM_View_Default        "切换到内置语言。"
+    IDM_View_FirstLang      "切换到这个语言。"
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_Help_Content        "显示帮助内容。"
+    IDM_Help_Desktop        "在桌面上创建本程序的快捷方式。"
+    IDM_Help_StartMenu      "在开始菜单中创建本程序的快捷方式。"
+    IDM_Help_ProgramMenu    "在程序菜单中创建本程序的快捷方式。"
+    IDM_Help_QuickLaunch    "在快速启动工具栏中创建本程序的快捷方式。"
+    IDM_Help_VisualStudio   "在 Microsoft Visual Studio 工具菜单中创建本程序的快捷方式。"
+    IDM_Help_About          "显示程序信息、版本号和版权。"
+END
+
+#endif    // 中文(中华人民共和国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+LANGUAGE LANG_NEUTRAL, SUBLANG_DEFAULT
+#pragma code_page(DEFAULT)
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION VER_Major, VER_Minor, VER_Release, VER_Build
+PRODUCTVERSION VER_Major, VER_Minor, VER_Release, VER_Build
+FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+FILEFLAGS 0
+FILEOS VOS__WINDOWS32
+FILETYPE 0
+FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040004e4"
+        BEGIN
+            VALUE "FileVersion", STR_VersionStamp
+            VALUE "FileDescription", STR_Description
+            VALUE "ProductName", STR_AppName
+            VALUE "ProductVersion", STR_Version
+            VALUE "CompanyName", STR_Corporation
+            VALUE "LegalCopyright", STR_Copyright
+            VALUE "Comments", "Powered by " STR_Author
+            VALUE "OriginalFilename", STR_AppName EXT_Exe
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x0400, 0x04e4
+    END
+END
+
+1 24
+BEGIN
+    "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>\r\n"
+    "<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>\r\n"
+    "<assemblyIdentity\r\n"
+    "    name='Microsoft.Windows.Shell.ClassXP'\r\n"
+    "    processorArchitecture='" STR_Architecture "'\r\n"
+    "    version='1.0.0.0'\r\n"
+    "    type='win32'/>\r\n"
+    "<description>ClassXP</description>\r\n"
+    "<dependency>\r\n"
+    "    <dependentAssembly>\r\n"
+    "        <assemblyIdentity\r\n"
+    "            type='win32'\r\n"
+    "            name='Microsoft.Windows.Common-Controls'\r\n"
+    "            version='6.0.0.0'\r\n"
+    "            processorArchitecture='" STR_Architecture "'\r\n"
+    "            publicKeyToken='6595b64144ccf1df'\r\n"
+    "            language='*'\r\n"
+    "        />\r\n"
+    "    </dependentAssembly>\r\n"
+    "</dependency>\r\n"
+   "</assembly>\r\n"
+END
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

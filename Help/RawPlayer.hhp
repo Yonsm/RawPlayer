@@ -1,0 +1,16 @@
+[OPTIONS]
+Compatibility=1.1 Or later
+Compiled file=RawPlayer.chm
+Default Window=Main
+Default topic=Welcome.htm
+Default font=宋体,9,1
+Contents file=RawPlayer.hhc
+Index file=RawPlayer.hhk
+Display compile progress=Yes
+Full-text search=Yes
+Language=0x804 中文(中国)
+
+[WINDOWS]
+Main="RawPlayer 帮助","RawPlayer.hhc","RawPlayer.hhk","Welcome.htm","Welcome.htm",,,,,0x520,200,0x384E,[40,40,832,640],0x0,0x0,,,,,0
+
+[FILES]

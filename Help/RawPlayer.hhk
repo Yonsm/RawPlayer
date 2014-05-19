@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="欢迎使用">
+		<param name="Local" value="Welcome.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="功能介绍">
+		<param name="Local" value="Feature.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="版本历史">
+		<param name="Local" value="Histroy.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="安装卸载">
+		<param name="Local" value="Install.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="文件菜单">
+		<param name="Local" value="FileMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="播放菜单">
+		<param name="Name" value="播放菜单">
+		<param name="Local" value="PlayMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="查看菜单">
+		<param name="Local" value="ViewMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="窗口菜单">
+		<param name="Name" value="窗口菜单">
+		<param name="Local" value="WindowMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="帮助菜单">
+		<param name="Local" value="HelpMenu.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="视频窗口">
+		<param name="Name" value="视频窗口">
+		<param name="Local" value="VideoWnd.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="打开对话框">
+		<param name="Name" value="打开对话框">
+		<param name="Local" value="OpenDlg.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="导出对话框">
+		<param name="Name" value="导出对话框">
+		<param name="Local" value="ExportDlg.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="热键列表">
+		<param name="Local" value="HotKey.htm">
+		</OBJECT>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="常见问题">
+		<param name="Local" value="FAQ.htm">
+		</OBJECT>
+</UL>
+</BODY></HTML>
