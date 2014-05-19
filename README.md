@@ -3,11 +3,13 @@ RawPlayer
 
 Raw (YUV/RGB) video player and subjective assess tool
 
-For more information, visit http://yonsm.net/rawplayer
+For more information, please visit [http://yonsm.net/rawplayer](http://yonsm.net/rawplayer)
 
 最好用、最有用的裸视频播放器（播放、对比、分析、转换等功能），专业人士必备：）
 
 RawPlayer 是一个解码后的原始视频数据的分析工具。它支持多种未压缩纯视频数据 (Uncompressed Raw Video Data，包括 YV12、IYUV、YUY2、YVYU、UYVY、VYUY、RGB24) 文件的显示播放，以及任意两种格式之间的相互转换。
+
+![](https://raw.githubusercontent.com/Yonsm/RawPlayer/master/Help/Images/RawPlayer.jpg)
 
 ##主要功能##
 * 播放多种未压缩纯视频文件，包括 YV12、IYUV、YUY2、YVYU、UYVY、VYUY、RGB24。
