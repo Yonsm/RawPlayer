@@ -624,7 +624,74 @@ VOID COpenDlg::OnPaint()
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
+//状态机，从文件名中得到第一个WxH形式的宽高
+//如 320x240, 720X480...
+bool guessResolution(PCTSTR filename, int& w, int& h)
+{
+	enum {
+		STATE_START,
+		STATE_WDITH,
+		STATE_X,
+		STATE_HEIGHT,
+		STATE_END,
+	};
+	int state = STATE_START;
+	PCTSTR p = filename;
+	PCTSTR tokStart;
+	w = h = 0;
+	while (*p != '\0') {
+		switch (state) {
+		case STATE_START:
+		{
+			if (isdigit(*p)) {
+				tokStart = p;
+				state = STATE_WDITH;
+			}
+			break;
+		}
+		case STATE_WDITH:
+		{
+			if (*p == 'x' || *p == 'X') {
+				state = STATE_X;
+				_stscanf(tokStart, _T("%d"), &w);
+			}
+			else if (!isdigit(*p)){
+				state = STATE_START;
+			}
+			break;
+		}
+		case STATE_X:
+		{
+			if (isdigit(*p)) {
+				tokStart = p;
+				state = STATE_HEIGHT;
+			}
+			else {
+				state = STATE_START;
+			}
+			break;
+		}
+		case STATE_HEIGHT:
+		{
+			if (!isdigit(*p)) {
+				state = STATE_END;
+				_stscanf(tokStart, _T("%d"), &h);
+			}
+			break;
+		}
+		}
+		if (state == STATE_END)
+			break;
+		p++;
+	}
+	//conner case
+	if (*p == '\0' && state == STATE_HEIGHT) {
+		if (!isdigit(*p)) {
+			_stscanf(tokStart, _T("%d"), &h);
+		}
+	}
+	return w && h;
+}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // 根据文件名获取视频大小
@@ -652,18 +719,12 @@ BOOL COpenDlg::GetSize(PCTSTR ptzFileName)
 	}
 
 	// 根据数字确定大小
-	for (; *p; p++)
+	INT w, h;
+	if (guessResolution(p, w, h))
 	{
-		if ((*p >= '0') && (*p <= '9'))
-		{
-			for (i = _StrToInt(p); (*p >= '0') && (*p <= '9'); p++);
-			if (p[0] && (p[1] >= '0') && (p[1] <= '9'))
-			{
-				m_riFormat.m_uWidth = i;
-				m_riFormat.m_iHeight = _StrToInt(p + 1);
-				return TRUE;
-			}
-		}
+		m_riFormat.m_uWidth = w;
+		m_riFormat.m_iHeight = h;
+		return TRUE;
 	}
 
 	return FALSE;
